@@ -6,15 +6,15 @@ import { useEffect } from "react";
 
 const Hero = () => {
     //to know our screen size and make our video adjust accordingly i need a useState hook:
-    const [videoSrc, setvideoSrc] = useState(window.innerWidth < 760 ? smallHeroVideo : heroVideo)
+    const [videoSrc, setVideoSrc] = useState(window.innerWidth < 760 ? smallHeroVideo : heroVideo)
 
     //i discovered that when i was manually adjusting my window the vid did not adjust dynamically hence:
     //function
     const handleVideoSrcSet = () => {
         if (window.innerWidth < 760) {
-            setvideoSrc(smallHeroVideo)
+            setVideoSrc(smallHeroVideo)
         } else {
-            setvideoSrc(heroVideo);
+            setVideoSrc(heroVideo);
         }
     };
 
