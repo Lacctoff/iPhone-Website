@@ -3,6 +3,9 @@ import Highlights from "./components/Highlights"
 import Navbar from "./components/Navbar"
 import Model from "./components/Model"
 import { SpeedInsights } from "@vercel/speed-insights/react"
+import Features from "./components/Features"
+
+import * as Sentry from '@sentry/react';
 
 const App = () => {
   return (
@@ -12,8 +15,9 @@ const App = () => {
       <Hero  />
       <Highlights />
       <Model />
+      <Features />
     </main>
   )
 }
 
-export default App
+export default Sentry.withProfiler(App);
