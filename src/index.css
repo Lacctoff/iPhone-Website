@@ -18,6 +18,10 @@ body {
   user-select: none;
 }
 
+html {
+  @apply scroll-smooth;
+}
+
 canvas {
   touch-action: none;
 }
